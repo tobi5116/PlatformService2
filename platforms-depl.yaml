@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: platformservice
-          image: tobiasmyrvoll/platformservice:platformv4
+          image: tobiasmyrvoll/platformservice:platformv10
 ---
 apiVersion: v1
 kind: Service
