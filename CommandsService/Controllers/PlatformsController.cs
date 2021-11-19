@@ -35,9 +35,13 @@ namespace CommandsService.Controllers
 
         // GET: api/<PlatformsController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult<IEnumerable<PlatformReadDto>> GetPlatforms()
         {
-            return new string[] { "value1", "value2" };
+            Console.WriteLine("--> Getting Platforms from CommandsService");
+
+            var platformItems = _repository.GetAllPlatforms();
+
+            return Ok(_mapper.Map<IEnumerable<PlatformReadDto>>(platformItems));
         }
 
         // GET api/<PlatformsController>/5
