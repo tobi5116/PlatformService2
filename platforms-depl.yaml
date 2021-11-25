@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: platformservice
-          image: tobiasmyrvoll/platformservice:platformv10
+          image: tobiasmyrvoll/platformservice:grpc
 ---
 apiVersion: v1
 kind: Service
@@ -29,3 +29,7 @@ spec:
     protocol: TCP
     port: 80
     targetPort: 80
+  - name: plafromgrpc
+    protocol: TCP
+    port: 666
+    targetPort: 666
